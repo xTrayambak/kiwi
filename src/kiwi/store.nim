@@ -87,6 +87,7 @@ proc flushWorker(store: Store) {.thread.} =
         break
 
     checkAndSynchronize(store)
+    sleep(30) # Sleep for ~30 ms to save on CPU resources
 
 proc loadStore*(
     file: string
