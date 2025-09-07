@@ -5,6 +5,7 @@ author = "Trayambak Rai"
 description = "A high-performance key-value store written in pure Nim"
 license = "MIT"
 srcDir = "src"
+installExt = @["nim"]
 bin = @["kiwiopen"]
 
 # Dependencies
