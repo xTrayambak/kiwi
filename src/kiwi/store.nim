@@ -155,12 +155,12 @@ proc del*(store: Store, key: string): bool {.sideEffect, discardable, raises: []
   else:
     return false
 
-iterator keys*(store: Store): string =
+iterator items*(store: Store): string =
   ## Get all keys in the store.
   for key, _ in store.state:
     yield key
 
-iterator items*(store: Store): (string, string) =
+iterator pairs*(store: Store): (string, string) =
   ## Get all key-value pairs in the store.
   for key, value in store.state:
     yield (key, value)
